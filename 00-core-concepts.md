@@ -216,3 +216,7 @@ Event -
 Filter -
 	const evenNumbers = numbers.filter(num => num % 2 === 0);
     console.log(evenNumbers);
+
+Reduce - 
+    const sum = numbers.reduce((total, num) => total + num,0);
+	console.log(sum);
