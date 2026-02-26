@@ -1,4 +1,3 @@
-
 Javascript controls logic and behaviour of websites.
 Js is a single threaded interpreted dynamic language which runs line by line and moves fast
 Variables - containers used to store data values - let, var, const
