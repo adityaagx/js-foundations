@@ -1,5 +1,8 @@
 # 📘 JavaScript Execution Context
 
+Execution Context is the environment where JavaScript runs code, storing variables, functions, scope, and `this`.  
+Every execution context is created in two phases — Creation Phase (memory setup) and Execution Phase (code runs line by line using the call stack).
+
 ---
 
 ## 🧠 1. What is Execution Context?
@@ -289,7 +292,13 @@ console.log(a);
 var a = 20;
 ```
 
-Think in terms of creation + execution phase.
+Global Creation -
+a = undefined
+
+Global execution -
+it prints undefined because during the creation phase, a was allocated memory and initialized with undefined.
+
+Js runs line by line, a value get updates to 20 after undefined but it never prints.
 
 ---
 
@@ -305,6 +314,23 @@ function test() {
 var a = 10;
 test();
 ```
+
+Global creation Phase -
+Memory gets allocated
+Function test definition
+a = undefined
+
+Global & Function Execution
+
+var = 10
+
+Function execution context -
+
+test function runs
+checks for local variables and parameters.
+It creates a Scope Chain link to access outer Global variables.
+
+Prints 10 on the screen.
 
 ---
 
@@ -324,6 +350,20 @@ first();
 ```
 
 Write the stack order.
+
+Global creation phase - 
+First - function definition
+Second - function definiton
+
+Execution Phase -
+
+First function first gets called, goes to the stack, 
+prints First on the screen and calls function second.
+
+Function second goes to the stack, runs and prints Second.
+
+Function second is removed.
+Function first is rmeoved.
 
 ---
 
