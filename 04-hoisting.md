@@ -241,7 +241,7 @@ var sayHello = function() {
 What happens? Why?
 
 Prints TypeError: sayHello is not a function, on the screen because var is intitialized
-and hoisted as a var undefined during creation phase.
+and hoisted as undefined during creation phase.
 
 ---
 
